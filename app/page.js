@@ -1,8 +1,13 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import { connectDB } from "@/util/database";
+import { MongoClient } from "mongodb"
 
-export default function Home() {
+export default async function Home() {
+
+  const client = await connectDB;
+  const db = client.db("forum")
+  let result = await db.collection('post').find().toArray()
+  console.log(result)  
   return (
-    <div>hi</div>
+    <div>안녕</div>
   )
 }
