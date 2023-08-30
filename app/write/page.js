@@ -5,10 +5,12 @@ export default function Write() {
             <form action='/api/date' method="GET">
                 <button type='submit'>버튼</button>
             </form>
+            
             <h4>리스트 가져오기</h4>
             <form action='/api/post_list' method="GET">
                 <button type='submit'>버튼</button>
             </form>
+
             <h4>글발행하기</h4>
             <form action='/api/post_list' method="POST">
                 <input name='title' />
